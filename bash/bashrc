@@ -3,18 +3,40 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-#prompt colors
+#------------------------Prompt colors------------- ----- #
 PS1="\n\[\e[38;5;125m\]\u\[\e[0;33m\] at \[\e[38;5;63m\]\h\[\e[0;33m\]:\[\e[38;5;80m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
 
-# sets dot aliases
+#------------------------Aliases------------------------- #
 alias gs="git status"
 alias gc="git commit -m"
 alias gA="git add -A && git status"
 alias gp="git push origin"
 
-#functions
+#------------------------Functions----------------------- #
 
-#set path
+# Checking if tree is installed #
+if ! [ -x "$(command -v tree)" ]; then
+  echo 'Tree not installed.' >&2
+  sudo yum install tree
+fi
+
+# Creating task #
+  # $1 is project path
+  # $2 is task name
+function task () {
+  if [ ! -d $1 ];
+  then
+     echo 'Project path not valid'
+  else
+     cd $1
+     mkdir $2
+     cd $2
+     mkdir src input output
+     tree -C
+  fi
+}
+
+#------------------------Path------------------------------#
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.5.10-0.el7_7.x86_64/bin/java
 export PATH=$JAVA_HOME/bin:$PATH
@@ -27,3 +49,4 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/maortizm/Documents/sonnarqube/sonar-scanner-4.2.0.1873-linux/bin
 export PATH=$PATH:/bin/python #Python 2.7.5
 
+                                                                                                                                    51,0-1        Bot
