@@ -4,14 +4,15 @@ if [ -f /etc/bashrc ]; then
 fi
 
 #prompt colors
-PS1="\n\[\e[38;5;43m\]\u\[\e[0;33m\] at \[\e[38;5;63m\]\h\[\e[0;33m\]:\[\e[38;5;25m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
+PS1="\n\[\e[38;5;125m\]\u\[\e[0;33m\] at \[\e[38;5;63m\]\h\[\e[0;33m\]:\[\e[38;5;80m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
 
 # sets dot aliases
-
-
 alias gs="git status"
 alias gc="git commit -m"
 alias gA="git add -A && git status"
+alias gp="git push origin"
+
+#functions
 
 #set path
 
