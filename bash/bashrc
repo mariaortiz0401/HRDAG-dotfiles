@@ -4,10 +4,14 @@ if [ -f /etc/bashrc ]; then
 fi
 
 #prompt colors
-PS1="\n\[\e[1;35m\]\u\[\e[0;33m\] at \[\e[1;36m\]\h\[\e[0;33m\]:\[\e[0;33m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
+PS1="\n\[\e[38;5;43m\]\u\[\e[0;33m\] at \[\e[38;5;63m\]\h\[\e[0;33m\]:\[\e[38;5;25m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
 
 # sets dot aliases
 
+
+alias gs="git status"
+alias gc="git commit -m"
+alias gA="git add -A && git status"
 
 #set path
 
@@ -20,3 +24,5 @@ export PATH=$PIG_HOME/bin:$PATH
 export PATH="$PATH:/usr/bin/elixir/bin:/usr/bin/node"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/maortizm/Documents/sonnarqube/sonar-scanner-4.2.0.1873-linux/bin
+export PATH=$PATH:/bin/python #Python 2.7.5
+
