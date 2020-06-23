@@ -40,13 +40,12 @@ function task () {
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.5.10-0.el7_7.x86_64/bin/java
 export PATH=$JAVA_HOME/bin:$PATH
-export HADOOP_HOME=/home/maortizm/Downloads/hadoop-3.1.2
+export HADOOP_HOME=$HOME/Downloads/hadoop-3.1.2
 export PATH=$HADOPP_HOME/bin:$PATH
-export PIG_HOME="/home/maortizm/Downloads/pig-0.17.0/"
+export PIG_HOME=$HOME/Downloads/pig-0.17.0/
 export PATH=$PIG_HOME/bin:$PATH
-export PATH="$PATH:/usr/bin/elixir/bin:/usr/bin/node"
+export PATH=$PATH:/usr/bin/elixir/bin:/usr/bin/node
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/maortizm/Documents/sonnarqube/sonar-scanner-4.2.0.1873-linux/bin
-export PATH=$PATH:/bin/python #Python 2.7.5
+export PATH=$PATH:$HOME/Documents/sonnarqube/sonar-scanner-4.2.0.1873-linux/bin
 
-                                                                                                                                    51,0-1        Bot
+# Done
