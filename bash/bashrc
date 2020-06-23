@@ -1,3 +1,10 @@
+# ------ #
+# Author: María Ortiz
+# Maintainers: María Ortiz
+# Date: Jun 19, 2020
+# License: 
+# ------ #
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
