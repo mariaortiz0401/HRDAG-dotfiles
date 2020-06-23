@@ -9,7 +9,6 @@
 set nocompatible
 
 " Plugins
-source ~/vim/plugs.vim
 
 " plug config
 
