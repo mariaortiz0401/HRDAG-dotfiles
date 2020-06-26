@@ -1,14 +1,9 @@
 # ------ #
-# Author: María Ortiz
-# Maintainers: María Ortiz
+# Author: Maria Ortiz
+# Maintainers: Maria Ortiz
 # Date: Jun 19, 2020
 # License: 
 # ------ #
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
-fi
 
 #------------------------Prompt colors------------- ----- #
 PS1="\n\[\e[38;5;125m\]\u\[\e[0;33m\] at \[\e[38;5;63m\]\h\[\e[0;33m\]:\[\e[38;5;80m\]\w\[\e[0;37m\]\n \[\e[0;33m\]$ \[\e[0;00m\]"
@@ -18,13 +13,16 @@ alias gs="git status"
 alias gc="git commit -m"
 alias gA="git add -A && git status"
 alias gp="git push origin"
-
+alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
+alias ll='ls -alF'                                                              
+alias la='ls -A'                                                                
+alias l='ls -CF'
 #------------------------Functions----------------------- #
 
 # Checking if tree is installed #
 if ! [ -x "$(command -v tree)" ]; then
   echo 'Tree not installed.' >&2
-  sudo yum install tree
+  sudo apt-get install tree
 fi
 
 # Creating task #
@@ -45,14 +43,5 @@ function task () {
 
 #------------------------Path------------------------------#
 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.5.10-0.el7_7.x86_64/bin/java
-export PATH=$JAVA_HOME/bin:$PATH
-export HADOOP_HOME=$HOME/Downloads/hadoop-3.1.2
-export PATH=$HADOPP_HOME/bin:$PATH
-export PIG_HOME=$HOME/Downloads/pig-0.17.0/
-export PATH=$PIG_HOME/bin:$PATH
-export PATH=$PATH:/usr/bin/elixir/bin:/usr/bin/node
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/Documents/sonnarqube/sonar-scanner-4.2.0.1873-linux/bin
 
 # Done
