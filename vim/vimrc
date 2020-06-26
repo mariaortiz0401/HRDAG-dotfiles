@@ -1,16 +1,16 @@
 " ------ 
-" Author: María Ortiz
-" Maintainers: María Ortiz
+" Author: Maria Ortiz
+" Maintainers: Maria Ortiz
 " Date: Jun 19, 2020
 " License: 
 " ------ 
 
-" Vi IMproved 
+" Vi Improved 
 set nocompatible
 
 " Plugins
 
-" plug config
+" plug Config
 
 " backspace 
 set backspace=indent,eol,start 
