@@ -8,8 +8,14 @@
 " Vi Improved 
 set nocompatible
 
-" Plugins
+" Setting Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+set laststatus=2
+set noshowmode
 
+" Plugins
+Plugin 'itchyny/lightline.vim'
 " plug Config
 
 " backspace 

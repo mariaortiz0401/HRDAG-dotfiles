@@ -14,7 +14,8 @@ alias gc="git commit -m"
 alias gA="git add -A && git status"
 alias gp="git push origin"
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
-alias ll='ls -alF'                                                              
+eval "$(fasd --init auto)"
+alias ll='ls -alF'                                                             
 alias la='ls -A'                                                                
 alias l='ls -CF'
 #------------------------Functions----------------------- #
