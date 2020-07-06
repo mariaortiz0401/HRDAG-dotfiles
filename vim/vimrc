@@ -8,19 +8,18 @@
 " Vi Improved 
 set nocompatible
 
-" Setting Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" backspace 
+set backspace=indent,eol,start 
+set clipboard=unnamed
 set laststatus=2
 set noshowmode
 
 " Plugins
-Plugin 'itchyny/lightline.vim'
-" plug Config
+call plug#begin(expand('~/.vim/plugged'))
 
-" backspace 
-set backspace=indent,eol,start 
-set clipboard=unnamed
+Plug 'itchyny/lightline.vim'
+Plug 'ap/vim-buftabline' 
+call plug#end()
 
 " sets up syntax highlighting
 syntax enable
