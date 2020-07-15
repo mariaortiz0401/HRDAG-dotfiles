@@ -20,13 +20,14 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-buftabline' 
 Plug 'luochen1990/rainbow'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
-"Inicialize plugins
+"Plugins setup
 let g:rainbow_active = 1
-
-" sets up syntax highlighting
 syntax enable
+set background=dark
+colorscheme solarized8_high
 
 " sets line numbers
 set relativenumber number
@@ -47,7 +48,4 @@ endif
 " color columns beyond 80 characters
 set colorcolumn=80
 highlight ColorColumn ctermbg=red guibg=red
-
-" English spell check
-
 
