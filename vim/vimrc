@@ -19,7 +19,11 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-buftabline' 
+Plug 'luochen1990/rainbow'
 call plug#end()
+
+"Inicialize plugins
+let g:rainbow_active = 1
 
 " sets up syntax highlighting
 syntax enable
@@ -45,5 +49,5 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=red guibg=red
 
 " English spell check
-set spelllang=en
-set spell
+
+
