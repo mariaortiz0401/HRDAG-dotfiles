@@ -44,6 +44,5 @@ function task () {
 }
 
 #------------------------Path------------------------------#
-
-
+export PATH="~/Documents/CEV/resource-utils/bin:$PATH"
 # Done
