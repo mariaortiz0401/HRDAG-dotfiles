@@ -21,6 +21,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-buftabline' 
 Plug 'luochen1990/rainbow'
 Plug 'lifepillar/vim-solarized8'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 "Plugins setup
