@@ -1,11 +1,11 @@
-<> ------------- Tip 72: Ajustar el case sensitive para búsquedas individuales -------------------------- #
+<!--
+    Tip 72: Ajustar el case sensitive para búsquedas individuales  
+-->
 
-
-# :set ignorecase: No distingue entre mayúsculas y minúsculas
-
-# /humanidad   - Buscar la palabra (¡Todas coinciden!) 
-# /\Chumanidad - \C obliga a buscar con mayúsculas y minúsculas 
-# /humanidad\C - Se puede usar también al final de la búsqueda  
+```:set ignorecase:``` <!-- No distingue entre mayúsculas y minúsculas -->
+/humanidad              <!--  Buscar la palabra (¡Todas coinciden!) -->
+/\Chumanidad            <!-- \C obliga a buscar con mayúsculas y minúsculas --> 
+/humanidad\C            <!-- Se puede usar también al final de la búsqueda  -->
 
 Humanidad
 humanidad
