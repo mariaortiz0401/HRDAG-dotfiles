@@ -22,6 +22,7 @@ Plug 'ap/vim-buftabline'
 Plug 'luochen1990/rainbow'
 Plug 'lifepillar/vim-solarized8'
 Plug 'jiangmiao/auto-pairs'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 "Plugins setup
