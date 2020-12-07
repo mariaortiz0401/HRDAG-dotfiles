@@ -45,4 +45,5 @@ function task () {
 
 #------------------------Path------------------------------#
 export PATH="~/Documents/CEV/resource-utils/bin:$PATH"
+export LC_ALL='en_US.UTF-8'
 # Done
