@@ -15,10 +15,12 @@ alias gA="git add -A && git status"
 alias gp="git push origin"
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
 eval "$(fasd --init auto)"
-alias ll='ls -alF'                                                             
-alias la='ls -A'                                                                
+alias ll='ls -alF'
+alias la='ls -A'
 alias l='ls -CF'
 alias vim="nvim"
+alias nosql="./Downloads/nosqlbooster4mongo-6.2.17.AppImage"
+alias robo3t="./usr/local/bin/robo3t/bin/robo3t"
 #------------------------Functions----------------------- #
 
 # Checking if tree is installed #
@@ -45,4 +47,26 @@ function task () {
 
 #------------------------Path------------------------------#
 export PATH="~/Documents/CEV/resource-utils/bin:$PATH"
+export CPLUS_INCLUDE_PATH=/usr/include/gdal
+export C_INCLUDE_PATH=/usr/include/gdal
 # Done
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/maortizm/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/maortizm/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/maortizm/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/maortizm/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
