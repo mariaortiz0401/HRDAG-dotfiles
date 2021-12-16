@@ -15,10 +15,11 @@ alias gA="git add -A && git status"
 alias gp="git push origin"
 alias j='xdir=$(fasd -dl | fzf --tac) && cd "$xdir"'
 eval "$(fasd --init auto)"
-alias ll='ls -alF'                                                             
-alias la='ls -A'                                                                
+alias ll='ls -alF'
+alias la='ls -A' 
 alias l='ls -CF'
 alias vim="nvim"
+alias repo="cd ~/CO-SIVJRNR-data"
 #------------------------Functions----------------------- #
 
 # Checking if tree is installed #
@@ -44,6 +45,23 @@ function task () {
 }
 
 #------------------------Path------------------------------#
-export PATH="~/Documents/CEV/resource-utils/bin:$PATH"
 export LC_ALL='en_US.UTF-8'
-# Done
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE="/home/pball/bin/micromamba";
+export MAMBA_ROOT_PREFIX="/opt/micromamba";
+__mamba_setup="$('/home/pball/bin/micromamba' shell hook --shell bash --prefix '/opt/micromamba' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    if [ -f "/opt/micromamba/etc/profile.d/mamba.sh" ]; then
+        . "/opt/micromamba/etc/profile.d/mamba.sh"
+    else
+        export PATH="/opt/micromamba/bin:$PATH"
+    fi
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
+
+# done
